@@ -1,0 +1,1 @@
+localStorage.time==null||localStorage.place==null?window.location="index.html":(document.getElementById("time").appendChild(document.createTextNode(localStorage.time)),document.getElementById("place").appendChild(document.createTextNode(localStorage.place)),localStorage.clear());

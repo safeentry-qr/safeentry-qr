@@ -1,0 +1,1 @@
+document.getElementById("text").addEventListener("submit",a=>{a.preventDefault(),window.location=`/checkin.html#update${encodeURIComponent(document.getElementsByTagName("input")[0].value)}`});
