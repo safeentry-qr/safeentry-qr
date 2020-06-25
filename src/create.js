@@ -10,7 +10,7 @@ else if (localStorage.history != "[]") {
     for (let i = 0; i < history.length; i++) {
         const container = document.createElement("a");
         container.classList.add("history");
-        container.href = `/checkin.html#update${encodeURIComponent(document.getElementsByTagName("input")[0].value)}`;
+        container.href = `/checkin.html#update${encodeURIComponent(document.getElementsByTagName("textarea")[0].value)}`;
         container.appendChild(document.createTextNode(history[i]));
 
         const deleteButton = document.createElement("img");
@@ -29,5 +29,5 @@ else if (localStorage.history != "[]") {
 }
 document.getElementById("text").addEventListener("submit", e => {
     e.preventDefault();
-    window.location = `/checkin.html#update${encodeURIComponent(document.getElementsByTagName("input")[0].value)}`;
+    window.location = `/checkin.html#update${encodeURIComponent(document.getElementsByTagName("textarea")[0].value)}`;
 });
