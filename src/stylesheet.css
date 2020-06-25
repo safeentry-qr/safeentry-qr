@@ -130,6 +130,9 @@ a {
     color: #0070e0;
     border: 1.5px solid #0070e0
 }
+img[src="/assets/checkin.svg"], img[src="/assets/checkout.svg"] {
+    margin-left: 14px;
+}
 
 button {
     appearance: none;
@@ -165,6 +168,10 @@ button {
 @media screen and (min-width:770px) {
     main, .history {
         width: 400px
+    }
+
+    img[src="/assets/checkin.svg"], img[src="/assets/checkout.svg"] {
+        width: 32px;
     }
 }
 
@@ -269,5 +276,9 @@ button {
     }
     a,button {
         font-size: 18px;
+    }
+
+    img[src="/assets/checkin.svg"], img[src="/assets/checkout.svg"] {
+        width: 19px;
     }
 }
