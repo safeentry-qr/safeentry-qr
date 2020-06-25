@@ -10,8 +10,11 @@ else if (localStorage.history != "[]") {
     for (let i = 0; i < history.length; i++) {
         const container = document.createElement("a");
         container.classList.add("history");
-        container.href = `/checkin.html#update${encodeURIComponent(document.getElementsByTagName("textarea")[0].value)}`;
-        container.appendChild(document.createTextNode(history[i]));
+        container.href = `/checkin.html#update${encodeURIComponent(history[i])}`;
+
+        const name = document.createElement("span");
+        name.appendChild(document.createTextNode(history[i]));
+        container.appendChild(name);
 
         const deleteButton = document.createElement("img");
         deleteButton.src = "/assets/delete.svg";
