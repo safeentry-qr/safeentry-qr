@@ -9,6 +9,9 @@ if (location.hash.includes("#update")) {
 
     localStorage.place = placeString;
     localStorage.time = timeString;
+
+    let history = JSON.parse(localStorage.history);
+    if (!history.includes(placeString)) localStorage.history = JSON.stringify([placeString, ...history]);
 }
 else if (localStorage.time == undefined || localStorage.place == undefined) {
     window.location = "index.html";
